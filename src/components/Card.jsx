@@ -1,23 +1,24 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Card() {
+export default function Card({ product }) {
     return (
         <div>
             <div className="card bg-base-100 m-2 shadow-sm">
                 <figure>
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt="Shoes" />
+                        src={product?.image}
+                        alt="Shoes" className='md:h-[280px]' />
                 </figure>
                 <div className="card-body">
-                    <h2 className="card-title">
-                        Card Title
-                    </h2>
-                    <p><span className='font-bold'>Price:</span> 00.00$</p>
+                    <p className='text-md'><span className='font-bold'>Product Name :</span> {product?.name}</p>
+                    <p className='text-md'><span className='font-bold'>Price:</span> {product?.price}$</p>
                     <div className="card-actions justify-end">
-                        <div className="badge badge-outline">Add to Cart</div>
-                        <div className="badge badge-outline"><Link to={'product-detail'}>Product Detail</Link></div>
+                        <div className="badge badge-outline text-xs cursor-pointer hover:bg-green-500 hover:text-white transition-colors duration-200">
+                            Add to Cart
+                        </div>
+
+                        <div className="badge badge-outline text-xs cursor-pointer hover:bg-blue-500 hover:text-white transition-colors duration-200"><Link to={'product-detail'}>Product Detail</Link></div>
                     </div>
                 </div>
             </div>

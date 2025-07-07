@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "name": "Wireless Headphones",
+        "price": 59.99,
+        "description": "Experience crystal-clear audio with our wireless headphones, featuring premium sound quality, long-lasting battery life, and a comfortable over-ear design for all-day use. Perfect for music, movies, or video calls.",
+        "image": "https://i.ibb.co/yMjsQKz/Wireless-Headphones.jpg",
+        "category": "electronics"
+    },
+    {
+        "id": 2,
+        "name": "Smart Watch",
+        "price": 89.99,
+        "description": "This sleek smart watch helps you stay connected on the go, offering real-time notifications, step and heart rate tracking, sleep monitoring, and water resistance. A perfect fitness and productivity companion.",
+        "image": "https://i.ibb.co/tpz9Pjvp/Smart-Watch.jpg",
+        "category": "wearables"
+    },
+    {
+        "id": 3,
+        "name": "Bluetooth Speaker",
+        "price": 39.99,
+        "description": "Enjoy powerful bass and clear treble with this portable Bluetooth speaker. With a compact design, built-in mic, and 10-hour battery life, it’s perfect for indoor and outdoor gatherings alike.",
+        "image": "https://i.ibb.co/Cs6jSY3p/Bluetooth-Speaker.jpg",
+        "category": "audio"
+    },
+    {
+        "id": 4,
+        "name": "Gaming Mouse",
+        "price": 24.99,
+        "description": "Designed for competitive gamers, this ergonomic gaming mouse features adjustable DPI settings, programmable buttons, and RGB lighting for ultimate control and style in every match.",
+        "image": "https://i.ibb.co/wFFqRrhL/Gaming-Mouse.jpg",
+        "category": "accessories"
+    },
+    {
+        "id": 5,
+        "name": "LED Monitor",
+        "price": 129.99,
+        "description": "Upgrade your workstation or gaming setup with this 24-inch Full HD LED monitor. With ultra-thin bezels, HDMI and VGA ports, and crisp display quality, it delivers immersive viewing from every angle.",
+        "image": "https://i.ibb.co/Cp4yF83K/LED-Monitor.jpg",
+        "category": "electronics"
+    },
+    {
+        "id": 6,
+        "name": "Laptop Stand",
+        "price": 19.99,
+        "description": "This sturdy and lightweight laptop stand improves posture and airflow while working. Adjustable height and anti-slip pads make it ideal for desks, home offices, or remote work setups.",
+        "image": "https://i.ibb.co/9LHbQCT/Laptop-Stand.jpg",
+        "category": "accessories"
+    },
+    {
+        "id": 7,
+        "name": "Wireless Keyboard",
+        "price": 34.99,
+        "description": "A slim and quiet wireless keyboard with low-profile keys and ergonomic design. Connect seamlessly via Bluetooth or USB receiver and type comfortably for hours on end.",
+        "image": "https://i.ibb.co/TM8qNSqC/Wireless-Keyboard.jpg",
+        "category": "accessories"
+    },
+    {
+        "id": 8,
+        "name": "Smartphone Tripod",
+        "price": 15.99,
+        "description": "Capture stable videos and selfies with this flexible smartphone tripod. Features adjustable legs, universal phone mount, and a compact design that fits easily in any travel bag.",
+        "image": "https://i.ibb.co/BHJqKYvt/Smartphone-Tripod.jpg",
+        "category": "photography"
+    },
+    {
+        "id": 9,
+        "name": "Portable SSD",
+        "price": 99.99,
+        "description": "Transfer files quickly with this 500GB portable SSD, offering blazing-fast read/write speeds, shock resistance, and compatibility with all major OS. Ideal for photographers, developers, and travelers.",
+        "image": "https://i.ibb.co/201XdLLh/Portable-SSD.jpg",
+        "category": "storage"
+    },
+    {
+        "id": 10,
+        "name": "Webcam 1080p",
+        "price": 49.99,
+        "description": "Enhance your virtual meetings with this 1080p HD webcam. With auto light adjustment, a noise-reducing mic, and plug-and-play support, it's perfect for work-from-home and streaming.",
+        "image": "https://i.ibb.co/5g75NhrC/Webcam-1080p.jpg",
+        "category": "accessories"
+    },
+    {
+        "id": 11,
+        "name": "Wireless Charger",
+        "price": 22.99,
+        "description": "Charge your devices effortlessly with this sleek wireless charger pad. Supports fast charging for all Qi-enabled phones and features smart temperature control for safe operation.",
+        "image": "https://i.ibb.co/Kz6Q2yDm/Wireless-Charger.jpg",
+        "category": "charging"
+    },
+    {
+        "id": 12,
+        "name": "USB-C Hub",
+        "price": 29.99,
+        "description": "Expand your laptop’s connectivity with this multi-port USB-C hub. Includes HDMI, USB 3.0, SD card reader, and more — all packed into a slim, travel-friendly design.",
+        "image": "https://i.ibb.co/7dxVm9wf/USB-C-Hub.jpg",
+        "category": "accessories"
+    },
+    {
+        "id": 13,
+        "name": "Noise-Canceling Earbuds",
+        "price": 79.99,
+        "description": "These wireless earbuds offer premium sound with active noise cancellation, touch controls, and a charging case that delivers up to 24 hours of battery life.",
+        "image": "https://i.ibb.co/fVDnfF0L/Noise-Canceling-Earbuds.jpg",
+        "category": "audio"
+    },
+    {
+        "id": 14,
+        "name": "Fitness Tracker",
+        "price": 49.99,
+        "description": "Monitor your fitness journey with this sleek tracker. Track steps, calories, sleep patterns, and heart rate while syncing data to your smartphone via Bluetooth.",
+        "image": "https://i.ibb.co/4ZFZ4PBW/Fitness-Tracker.jpg",
+        "category": "wearables"
+    },
+    {
+        "id": 15,
+        "name": "Mechanical Keyboard",
+        "price": 74.99,
+        "description": "A full-sized mechanical keyboard with clicky blue switches, RGB backlighting, and durable keycaps — perfect for gaming, programming, or productivity.",
+        "image": "https://i.ibb.co/zpp1KHq/Mechanical-Keyboard.jpg",
+        "category": "accessories"
+    },
+    {
+        "id": 16,
+        "name": "Tablet Stand",
+        "price": 18.99,
+        "description": "Use your tablet hands-free with this adjustable stand. Compatible with all major tablets, it features anti-slip grips and foldable arms for easy portability.",
+        "image": "https://i.ibb.co/5JLHnv2/Tablet-Stand.jpg",
+        "category": "accessories"
+    },
+    {
+        "id": 17,
+        "name": "Smart Light Bulb",
+        "price": 14.99,
+        "description": "Transform any room with this smart LED bulb. Control brightness and color from your phone or voice assistant. Energy-efficient and easy to set up via Wi-Fi.",
+        "image": "https://i.ibb.co/CsJ0bM8p/Smart-Light-Bulb.jpg",
+        "category": "smart home"
+    },
+    {
+        "id": 18,
+        "name": "Laptop Sleeve",
+        "price": 12.99,
+        "description": "Protect your laptop with this padded, water-resistant sleeve. Features a smooth zipper and extra pocket for accessories — fits 13\" to 15.6\" devices.",
+        "image": "https://i.ibb.co/KxQ3dSsj/Laptop-Sleeve.jpg",
+        "category": "accessories"
+    },
+    {
+        "id": 19,
+        "name": "Action Camera",
+        "price": 119.99,
+        "description": "Capture your adventures in stunning 4K with this waterproof action camera. Includes multiple mounts, a touchscreen, and slow-motion recording mode.",
+        "image": "https://i.ibb.co/C5g5RqtJ/Action-Camera.jpg",
+        "category": "photography"
+    },
+    {
+        "id": 20,
+        "name": "Desk Organizer",
+        "price": 17.99,
+        "description": "Keep your workspace tidy with this multi-compartment desk organizer. Store pens, notepads, cables, and more in a compact, minimalistic design.",
+        "image": "https://i.ibb.co/LdXjhyvD/Desk-Organizer.jpg",
+        "category": "office"
+    }
+]

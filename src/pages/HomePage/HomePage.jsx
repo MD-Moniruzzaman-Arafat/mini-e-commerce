@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from '../../components/Card'
 
 export default function HomePage() {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch('products.json')
+            .then(res => res.json())
+            .then(data => setProducts(data))
+    }, [])
+
+    console.log(products)
+
     return (
         <div className='container mx-auto'>
             <div className='grid gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                {
+                    products.length > 0 ? products.map(product => <Card key={product.id} product={product} />) : 'hello'
+                }
             </div>
         </div>
     )
