@@ -13,9 +13,8 @@ export default function Card() {
                 <div className="card-body">
                     <h2 className="card-title">
                         Card Title
-                        <div className="badge badge-secondary">NEW</div>
                     </h2>
-                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                    <p><span className='font-bold'>Price:</span> 00.00$</p>
                     <div className="card-actions justify-end">
                         <div className="badge badge-outline">Add to Cart</div>
                         <div className="badge badge-outline"><Link to={'product-detail'}>Product Detail</Link></div>
