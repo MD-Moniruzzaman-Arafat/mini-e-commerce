@@ -56,15 +56,15 @@ export default function ProductCart({ cartProduct }) {
 
                         <fieldset className="fieldset">
                             <legend className="fieldset-legend">Name</legend>
-                            <input type="text" className="input w-full" placeholder="Name...." />
+                            <input type="text" className="input w-full" placeholder="Name...." required />
                         </fieldset>
                         <fieldset className="fieldset">
                             <legend className="fieldset-legend">Email</legend>
-                            <input type="email" className="input w-full" placeholder="Email...." />
+                            <input type="email" className="input w-full" placeholder="Email...." required />
                         </fieldset>
                         <fieldset className="fieldset">
                             <legend className="fieldset-legend">Address</legend>
-                            <textarea className="textarea h-24 w-full" placeholder="Address...."></textarea>
+                            <textarea className="textarea h-24 w-full" placeholder="Address...." required></textarea>
                         </fieldset>
                         <button className="badge badge-outline text-xs cursor-pointer hover:bg-blue-500 hover:text-white transition-colors duration-200">Submit</button>
                     </form>
