@@ -4,7 +4,7 @@ import ProductCart from './ProductCart'
 import { CartContext } from '../Context'
 
 export default function Navbar() {
-    const { cartProducts, totalPrice } = useContext(CartContext)
+    const { cartProducts, totalPrice, productQuantityPrice } = useContext(CartContext)
 
     const menu = (
         <>
@@ -80,25 +80,20 @@ export default function Navbar() {
                                 </thead>
                                 <tbody>
                                     {/* row 1 */}
-                                    <tr>
-                                        <td>Quality Control Specialist</td>
-                                        <td>Blue</td>
-                                    </tr>
-                                    {/* row 2 */}
-                                    <tr>
-                                        <td>Desktop Support Technician</td>
-                                        <td>Purple</td>
-                                    </tr>
-                                    {/* row 3 */}
-                                    <tr>
-                                        <td>Tax Accountant</td>
-                                        <td>Red</td>
-                                    </tr>
+                                    {
+                                        cartProducts.map(cartProduct => {
+                                            return (
+                                                <tr key={cartProduct.id}>
+                                                    <td>{cartProduct.name}</td>
+                                                    <td>{cartProduct.price}$</td>
+                                                </tr>)
+                                        })
+                                    }
                                 </tbody>
                                 <tfoot>
                                     <tr>
                                         <th>Total</th>
-                                        <th>{totalPrice}$</th>
+                                        <th>{(totalPrice + productQuantityPrice).toFixed(2)}$</th>
                                     </tr>
                                 </tfoot>
                             </table>

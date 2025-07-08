@@ -2,18 +2,20 @@ import React, { useContext, useState } from 'react'
 import { CartContext } from '../Context'
 export default function ProductCart({ cartProduct }) {
     const [productQuantity, setProductQuantity] = useState(1)
-    const { totalPrice, setTotalPrice } = useContext(CartContext)
+    const { productQuantityPrice, setProductQuantityPrice } = useContext(CartContext)
 
     function handleIncrease() {
         setProductQuantity(productQuantity + 1)
-        const productQuantityPrice = cartProduct?.price + totalPrice;
-        setTotalPrice(productQuantityPrice)
+        const quantityPrice = cartProduct?.price + productQuantityPrice;
+        setProductQuantityPrice(quantityPrice)
     }
 
     function handleDecrease() {
-        setProductQuantity(productQuantity - 1)
-        setTotalPrice((productQuantity * cartProduct?.price) + totalPrice)
-
+        if (productQuantity > 1) {
+            setProductQuantity(productQuantity - 1)
+            const quantityPrice = productQuantityPrice - cartProduct?.price;
+            setProductQuantityPrice(quantityPrice)
+        }
     }
 
 
