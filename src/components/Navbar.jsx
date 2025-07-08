@@ -4,7 +4,8 @@ import ProductCart from './ProductCart'
 import { CartContext } from '../Context'
 
 export default function Navbar() {
-    const { cartProducts } = useContext(CartContext)
+    const { cartProducts, totalPrice } = useContext(CartContext)
+
     const menu = (
         <>
             <li><Link to={'/'}>Home</Link></li>
@@ -43,12 +44,12 @@ export default function Navbar() {
                 <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-1">
+                    <ul className="bg-base-200 text-base-content min-h-full w-80 p-1">
                         {/* Sidebar content here */}
                         <div className='flex justify-end'>
-                            <li className=''><label htmlFor="my-drawer-4"><a>
+                            <li><label htmlFor="my-drawer-4"><a>
                                 <svg
-                                    className="swap-on fill-current"
+                                    className="swap-on fill-current cursor-pointer"
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="32"
                                     height="32"
@@ -61,6 +62,47 @@ export default function Navbar() {
                         {
                             cartProducts.map(cartProduct => <li key={cartProduct.id}><ProductCart cartProduct={cartProduct} /></li>)
                         }
+                        <hr />
+                        <hr />
+                        <div>
+                            <h1 className='text-center font-bold'>Total Product Price</h1>
+                        </div>
+                        <hr />
+                        <hr />
+                        <div className="overflow-x-auto">
+                            <table className="table table-zebra">
+                                {/* head */}
+                                <thead>
+                                    <tr>
+                                        <th>Product Name</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {/* row 1 */}
+                                    <tr>
+                                        <td>Quality Control Specialist</td>
+                                        <td>Blue</td>
+                                    </tr>
+                                    {/* row 2 */}
+                                    <tr>
+                                        <td>Desktop Support Technician</td>
+                                        <td>Purple</td>
+                                    </tr>
+                                    {/* row 3 */}
+                                    <tr>
+                                        <td>Tax Accountant</td>
+                                        <td>Red</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>Total</th>
+                                        <th>{totalPrice}$</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
                     </ul>
                 </div>
             </div>

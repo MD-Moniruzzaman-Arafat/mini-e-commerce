@@ -14,13 +14,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/product-detail/:id",
-                loader: async ({ params }) => {
-                    const res = await fetch('/products.json');
-                    const products = await res.json();
-                    const product = products.find(p => p.id === parseInt(params.id));
-                    if (!product) throw new Response("Not Found", { status: 404 });
-                    return product;
-                },
+                loader: fetch('/products.json').then(res => res.json()).then(data => data),
                 element: <ProductDetailPage />
             }
         ]

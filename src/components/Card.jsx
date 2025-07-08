@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { CartContext } from '../Context'
+import { CartContext, TotalPriceContext } from '../Context'
 
 export default function Card({ product }) {
 
