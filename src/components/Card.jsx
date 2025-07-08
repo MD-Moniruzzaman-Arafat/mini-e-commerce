@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../Context'
 
 export default function Card({ product }) {
 
+    const { cartProducts, setCartProducts } = useContext(CartContext);
 
+    function handleCart() {
+        const findItem = cartProducts.find(cartProduct => cartProduct.id === product.id)
+        if (!findItem) {
+            setCartProducts([...cartProducts, product])
+        }
+    }
 
     return (
         <div>
@@ -11,13 +19,13 @@ export default function Card({ product }) {
                 <figure>
                     <img
                         src={product?.image}
-                        alt="Shoes" className='md:h-[280px]' />
+                        alt="Shoes" className='md:h-[280px] md:w-full' />
                 </figure>
                 <div className="card-body">
                     <p className='text-md'><span className='font-bold'>Product Name :</span> {product?.name}</p>
                     <p className='text-md'><span className='font-bold'>Price:</span> {product?.price}$</p>
                     <div className="card-actions justify-end">
-                        <div className="badge badge-outline text-xs cursor-pointer hover:bg-green-500 hover:text-white transition-colors duration-200">
+                        <div onClick={handleCart} className="badge badge-outline text-xs cursor-pointer hover:bg-green-500 hover:text-white transition-colors duration-200">
                             Add to Cart
                         </div>
 

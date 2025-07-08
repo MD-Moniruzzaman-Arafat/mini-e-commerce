@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Card from '../../components/Card'
+import { CartContext } from '../../Context';
 
 export default function HomePage() {
     const [products, setProducts] = useState([]);
+    const { cartProducts } = useContext(CartContext)
+    console.log(cartProducts)
 
     useEffect(() => {
-        fetch('products.json')
+        fetch('/products.json')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

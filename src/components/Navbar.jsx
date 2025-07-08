@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import ProductCart from './ProductCart'
+import { CartContext } from '../Context'
 
 export default function Navbar() {
+    const { cartProducts } = useContext(CartContext)
     const menu = (
         <>
             <li><Link to={'/'}>Home</Link></li>
-            <li><label htmlFor="my-drawer-4"><a>Cart</a></label></li>
-
+            <div className="indicator">
+                <span className="indicator-item badge bg-transparent">{cartProducts.length}</span>
+                <li><label htmlFor="my-drawer-4"><a>Cart</a></label></li>
+                {/* <button className="">inbox</button> */}
+            </div>
         </>
     )
     return (
@@ -37,7 +43,7 @@ export default function Navbar() {
                 <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+                    <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-1">
                         {/* Sidebar content here */}
                         <div className='flex justify-end'>
                             <li className=''><label htmlFor="my-drawer-4"><a>
@@ -52,8 +58,9 @@ export default function Navbar() {
                                 </svg>
                             </a></label></li>
                         </div>
-                        <li><a>Sidebar Item 1</a></li>
-                        <li><a>Sidebar Item 2</a></li>
+                        {
+                            cartProducts.map(cartProduct => <li key={cartProduct.id}><ProductCart cartProduct={cartProduct} /></li>)
+                        }
                     </ul>
                 </div>
             </div>

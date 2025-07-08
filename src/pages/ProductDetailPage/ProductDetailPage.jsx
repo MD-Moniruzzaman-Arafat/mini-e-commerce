@@ -1,9 +1,7 @@
-import React from 'react'
 import { useLoaderData } from 'react-router-dom'
 
 export default function ProductDetailPage() {
     const productDetails = useLoaderData()
-    console.log(productDetails)
     return (
         <div className='container mx-auto mt-5'>
             <div className="card bg-base-100 m-2 shadow-sm">
